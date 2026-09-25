@@ -1,7 +1,7 @@
 # Pay Down or Invest? A Stochastic Model of Post-Grad Capital Allocation
 
 **AMS 325 group project, Stony Brook University**
-Team: Victoria · Irene Wu · Edward Kwong · *(open slots)*
+Team: Victoria Irizarry · Irene Wu · Edward Kwong · *(open slots)*
 
 ## Research question
 A new graduate has student debt *D* at APR *r* and a fixed monthly budget *B* for debt and investing.
@@ -52,7 +52,7 @@ $30k loan at 6.5%, $800/month budget, 20-year horizon, μ = 8%, σ = 16%, 20,000
 |---|---|---|
 | Model & math | TBD | Derivations, volatility drag, jump-diffusion spec, report §2 |
 | Simulation engine | TBD | `gbm.py`, `simulate.py`, performance, extensions |
-| Data & verification | TBD | `calibrate.py`, convergence study, tests |
+| Data & verification | Victoria Irizarry | `calibrate.py`, convergence study, tests |
 | Visualization & report | TBD | figures, slides, report assembly |
 
 ## Workflow
