@@ -1,0 +1,6 @@
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+pytest>=8.0
+yfinance>=0.2   # only needed for calibrate.fetch_prices
+jupyter
