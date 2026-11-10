@@ -1,7 +1,7 @@
 # Pay Down or Invest? A Stochastic Model of Post-Grad Capital Allocation
 
 **AMS 325 group project, Stony Brook University**
-Team: Victoria Irizarry · Irene Wu · Edward Kwong · *(open slots)*
+Team: Victoria Irizarry · Irene Wu · Edward Kwong · Theodore Rivera
 
 ## Research question
 A new graduate has student debt *D* at APR *r* and a fixed monthly budget *B* for debt and investing.
@@ -50,7 +50,7 @@ $30k loan at 6.5%, $800/month budget, 20-year horizon, μ = 8%, σ = 16%, 20,000
 ## Team roles (draft, update on the progress slide)
 | Role | Owner | Scope |
 |---|---|---|
-| Model & math | TBD | Derivations, volatility drag, jump-diffusion spec, report §2 |
+| Model & math | Edward Kwong/ Theodore Rivera | Derivations, volatility drag, jump-diffusion spec, report §2 |
 | Simulation engine | Irene Wu | `gbm.py`, `simulate.py`, performance, extensions |
 | Data & verification | Victoria Irizarry | `calibrate.py`, convergence study, tests |
 | Visualization & report | Edward Kwong/Irene Wu | figures, slides, report assembly |
@@ -68,7 +68,7 @@ $30k loan at 6.5%, $800/month budget, 20-year horizon, μ = 8%, σ = 16%, 20,000
 - [ ] ~4-page report: abstract & objectives; techniques & tools; observations & conclusions; contributions; references
 - [ ] Code + data submitted through this repo
 
-## References (starter; verify and extend)
+## References 
 - Glasserman, P. (2003). *Monte Carlo Methods in Financial Engineering*. Springer.
 - Higham, D. J. (2001). An algorithmic introduction to numerical simulation of SDEs. *SIAM Review*, 43(3).
 - Merton, R. C. (1976). Option pricing when underlying stock returns are discontinuous. *J. Financial Economics*, 3.
