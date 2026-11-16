@@ -17,7 +17,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from .debt import Loan
-from .gbm import gross_returns
+from .gbm import gross_returns, simulate_exact
 from .strategies import Strategy
 
 
