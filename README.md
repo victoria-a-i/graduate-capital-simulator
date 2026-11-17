@@ -55,7 +55,7 @@ $30k loan at 6.5%, $800/month budget, 20-year horizon, μ = 8%, σ = 16%, 20,000
 | Model & math | Edward Kwong/ Theodore Rivera | Derivations, volatility drag, jump-diffusion spec, report §2 |
 | Simulation engine | Irene Wu | `gbm.py`, `simulate.py`, performance, extensions |
 | Data & verification | Victoria Irizarry | `calibrate.py`, convergence study, tests |
-| Visualization & report | Edward Kwong/Irene Wu | figures, slides, report assembly |
+| Visualization & report | Edward Kwong/Irene Wu/Victoria Irizarry/Theodore Rivera | figures, slides, report assembly |
 
 ## Workflow
 - Branch per feature: `git checkout -b feature/jump-diffusion`, then open a PR, and a teammate reviews it before merging.
