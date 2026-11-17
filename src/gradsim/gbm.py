@@ -10,7 +10,6 @@ Euler-Maruyama discretisation (approximate, kept for the verification study):
 
 All functions are vectorised over paths: arrays have shape (n_paths, n_steps[+1]).
 """
-from __future__ import annotations
 
 import numpy as np
 
