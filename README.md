@@ -18,14 +18,16 @@ and the graduate's risk aversion?
 | Engine | Vectorised Monte Carlo with common random numbers across strategies | `src/gradsim/simulate.py` |
 | Metrics | Percentiles, P(A beats B), CVaR, CRRA certainty equivalent, MC standard error | `src/gradsim/metrics.py` |
 | Calibration | MLE of μ, σ from historical log returns (yfinance, optional) | `src/gradsim/calibrate.py` |
+| Real data | S&P 500 loaders, GBM diagnostics, historical backtest, block bootstrap | `src/gradsim/historical.py` |
 
 ## Quick start
 ```bash
 git clone <repo-url> && cd graduate-capital-simulator
 python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-pytest                         # 14 tests should pass
+pytest                         # 19 tests should pass
 python scripts/run_baseline.py # prints a results table, writes figures/
+python scripts/real_data_test.py # calibrates on real S&P 500 data, writes results/ and figures/real_*.png
 ```
 
 ## First results (placeholder parameters, not calibrated)
@@ -38,11 +40,11 @@ $30k loan at 6.5%, $800/month budget, 20-year horizon, μ = 8%, σ = 16%, 20,000
   regimes where the choice *matters*: large debt relative to the budget, short horizons, and high risk aversion.
 
 ## Roadmap
-- [ ] **Calibrate** μ, σ from S&P 500 total-return data (^SP500TR). Report the standard error of μ, which is large.
+- [x] **Calibrate** μ, σ from S&P 500 total-return data (Shiller 1926–2023 + ^SP500TR 1988–2024). See `results/real_data_results.md`.
 - [ ] **Verification study**: weak and strong error of Euler vs. the exact scheme; convergence plots
 - [ ] **Scenario grid**: debt size, APR, budget, horizon, σ, risk aversion γ
 - [ ] **Extension 1**: Merton jump-diffusion (fat tails, crashes). Does the answer change?
-- [ ] **Extension 2**: bootstrap historical returns as a non-parametric benchmark
+- [~] **Extension 2**: bootstrap historical returns as a non-parametric benchmark (first version in `historical.py`; needs a block-length sensitivity check)
 - [ ] **Extension 3**: employer 401(k) match; "match-first" strategy
 - [ ] **Extension 4 (stretch)**: income shocks / job loss; stochastic loan rates (Vasicek)
 - [ ] **Out of scope, to state in the report**: taxes, income-driven repayment, forgiveness programs (check current federal rules at studentaid.gov)
