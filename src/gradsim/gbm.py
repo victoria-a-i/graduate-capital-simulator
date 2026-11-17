@@ -1,5 +1,6 @@
 """Geometric Brownian Motion, implemented from scratch with NumPy.
 
+Model asset path using both the Exact Log-Normal soln and the Euler-Maruyama discretization scheme.
 Model:  dS_t = mu * S_t dt + sigma * S_t dW_t
 
 Exact solution (Ito's lemma on log S):
