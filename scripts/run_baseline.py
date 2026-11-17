@@ -104,7 +104,9 @@ def fig_breakeven_heatmap():
     fig.savefig(FIG / "breakeven_heatmap.png", dpi=150)
 
 def fig_benchmark():
+    import time  # <--- Added missing import
     from gradsim.gbm import simulate_exact
+
     path_counts = [1_000, 5_000, 20_000, 50_000]
     t_vec = []
     for n in path_counts:
@@ -114,10 +116,15 @@ def fig_benchmark():
 
     fig, ax = plt.subplots(figsize=(8, 4.5))
     ax.plot(path_counts, t_vec, "o-", label="Vectorized Runtime", color="navy")
-    ax.set(xlabel="Number of Paths", ylabel="Time (s)", title="Simulation Runtime Scaling")
+    ax.set(
+        xlabel="Number of Paths (N)",
+        ylabel="Time (seconds)",
+        title="Simulation Runtime Scaling",
+    )
     ax.legend(frameon=False)
     fig.tight_layout()
     fig.savefig(FIG / "performance_benchmark.png", dpi=150)
+    plt.close(fig)  # <--- Free figure memory
 
 if __name__ == "__main__":
     res = table()
